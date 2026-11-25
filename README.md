@@ -4,7 +4,7 @@ Aplicativo web para organizar tarefas do dia a dia: você adiciona, marca o que 
 
 **[Abrir demo](https://vitormarques07.github.io/lista-de-tarefas/)**
 
-<!-- Para adicionar uma imagem da tela: salve um print como screenshot.png no repositório e troque esta linha por: ![TaskFlow](screenshot.png) -->
+
 
 ## O que ele faz
 
@@ -28,16 +28,16 @@ Abra o `index.html` no navegador. Não há instalação.
 ```bash
 git clone https://github.com/VitorMarques07/lista-de-tarefas.git
 cd lista-de-tarefas
-# abra o index.html no navegador
+
 ```
 
 ## Estrutura
 
 ```
 lista-de-tarefas/
-├── index.html   # estrutura da página
-├── style.css    # visual, temas e responsividade
-├── script.js    # lógica, filtros, progresso e salvamento
+├── index.html 
+├── style.css    
+├── script.js   
 └── README.md
 ```
 
