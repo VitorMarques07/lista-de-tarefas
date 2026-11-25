@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TaskFlow — Lista de Tarefas</title>
+  <meta name="description" content="TaskFlow: lista de tarefas com filtros, barra de progresso e salvamento automático no navegador.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <p class="date" id="date"></p>
+      <h1>TaskFlow</h1>
+      <div class="progress" role="group" aria-label="Progresso das tarefas">
+        <div class="progress-head">
+          <span class="progress-percent" id="percent">0%</span>
+          <span class="progress-text" id="progress-text">Nenhuma tarefa ainda</span>
+        </div>
+        <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Tarefas concluídas" id="bar">
+          <div class="bar-fill" id="bar-fill"></div>
+        </div>
+      </div>
+    </header>
+
+    <section class="panel">
+      <form id="form" class="add" autocomplete="off">
+        <label for="input" class="sr-only">Nova tarefa</label>
+        <input id="input" type="text" maxlength="120" placeholder="O que você precisa fazer?" required>
+        <button type="submit" class="btn-add">Adicionar</button>
+      </form>
+
+      <div class="toolbar">
+        <div class="filters" role="group" aria-label="Filtrar tarefas">
+          <button type="button" class="filter is-active" data-filter="all" aria-pressed="true">Todas <span id="count-all">0</span></button>
+          <button type="button" class="filter" data-filter="pending" aria-pressed="false">Pendentes <span id="count-pending">0</span></button>
+          <button type="button" class="filter" data-filter="done" aria-pressed="false">Concluídas <span id="count-done">0</span></button>
+        </div>
+        <button type="button" class="btn-clear" id="clear-done" hidden>Limpar concluídas</button>
+      </div>
+
+      <ul class="list" id="list" aria-live="polite"></ul>
+      <p class="empty" id="empty" hidden></p>
+    </section>
+
+    <footer class="foot">Suas tarefas ficam salvas neste navegador.</footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
